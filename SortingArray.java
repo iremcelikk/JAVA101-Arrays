@@ -26,15 +26,16 @@ public class SortingArray {
 		int[] array = new int[arrayLength];
 
 		for (int i = 0; i < arrayLength; i++) {
-			System.out.println("Enter the " + (i + 1) + ". element of the list:");
+			System.out.println("Enter the " + (i + 1) + ". element of the array:");
 			array[i] = sc.nextInt();
 		}
 
 		System.out.println("List is:\t" + Arrays.toString(array));
 
 		int[] sorted_array = sorting(array);
-		System.out.println("Sorted List is:\t" + Arrays.toString(sorted_array));
+		System.out.println("Sorted Array is:\t" + Arrays.toString(sorted_array));
 
 	}
 
 }
+
