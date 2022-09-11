@@ -11,3 +11,5 @@
 5-SortingArray -> Description: Sorts the given array
 
 6-RepeatingNumbersInArray -> Description: Finds repeating numbers in a given array and finds out how many times it is repeated.
+
+7-MatrixTranspose -> Description: Create a transpose matrix of the entered matrix
