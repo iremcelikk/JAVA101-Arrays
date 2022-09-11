@@ -3,33 +3,33 @@ import java.util.Scanner;
 
 public class NearestNumber {
 
-	static int[] sorting(int[] list) {
+	static int[] sorting(int[] array) {
 
-		for (int i = 0; i < list.length; i++) {
-			for (int j = i + 1; j < list.length; j++) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = i + 1; j < array.length; j++) {
 				int temp = 0;
-				if (list[i] > list[j]) {
-					temp = list[i];
-					list[i] = list[j];
-					list[j] = temp;
+				if (array[i] > array[j]) {
+					temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
 				}
 			}
 		}
-		return list;
+		return array;
 	}
 
-	static String[] findNearest(int[] list, int number) {
+	static String[] findNearest(int[] array, int number) {
 		int maxNearest = 0;
-		int minNearest = list[list.length - 1];
+		int minNearest = array[array.length - 1];
 
 		String bigNearest;
 		String smallNearest;
 
-		for (int i = 0; i < list.length; i++) {
-			if (list[i] > number) {
-				maxNearest = list[i];
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] > number) {
+				maxNearest = array[i];
 				if (i - 1 >= 0) {
-					minNearest = list[i - 1];
+					minNearest = array[i - 1];
 				} else {
 					minNearest = 0;
 				}
@@ -55,24 +55,24 @@ public class NearestNumber {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter the length of list");
-		int listLength = sc.nextInt();
-		int[] list = new int[listLength];
+		System.out.println("Enter the length of array");
+		int arrayLength = sc.nextInt();
+		int[] array = new int[arrayLength];
 
-		for (int i = 0; i < listLength; i++) {
-			System.out.println("Enter the " + (i + 1) + ". element of the list:");
-			list[i] = sc.nextInt();
+		for (int i = 0; i < arrayLength; i++) {
+			System.out.println("Enter the " + (i + 1) + ". element of the array:");
+			array[i] = sc.nextInt();
 		}
 
-		System.out.println("List is:\t" + Arrays.toString(list));
+		System.out.println("Array is:\t" + Arrays.toString(array));
 
-		int[] sorted_list = sorting(list);
-		System.out.println("Sorted List is:\t" + Arrays.toString(sorted_list));
+		int[] sorted_array = sorting(array);
+		System.out.println("Sorted Array is:\t" + Arrays.toString(sorted_array));
 
 		System.out.println("Enter the number to find big and small nearest numbers:");
 		int number = sc.nextInt();
 
-		String[] nearests = findNearest(sorted_list, number);
+		String[] nearests = findNearest(sorted_array, number);
 
 		String min_nearest = nearests[0];
 		String max_nearest = nearests[1];
