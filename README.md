@@ -8,4 +8,6 @@
 
 4-RepeatingEvenNumbersInArray -> Description: Finds repeating even numbers in a given array and finds out how many times it is repeated.
 
+5-SortingArray -> Description: Sorts the given array
+
 6-RepeatingNumbersInArray -> Description: Finds repeating numbers in a given array and finds out how many times it is repeated.
